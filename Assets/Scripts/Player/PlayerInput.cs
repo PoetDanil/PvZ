@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using YG;
 
-public class PlayerInput : Sounds
+public class PlayerInput : NewSouds
 {
     public static Action OnJump;
 
@@ -58,7 +58,7 @@ public class PlayerInput : Sounds
     public void Jump() // ������
     {
         OnJump?.Invoke();
-        PlaySound(sounds[0], 0.7f);
+        PlaySound(0, volume: 0.7f);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -66,7 +66,7 @@ public class PlayerInput : Sounds
         if (other.gameObject.CompareTag("Coin")) // �������
         {
             coins++;
-            PlaySound(sounds[1], volume : 0.32f);
+            PlaySound(1, volume : 0.32f);
             Destroy(other.gameObject);
         }
     }
@@ -74,7 +74,7 @@ public class PlayerInput : Sounds
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("wall")) {
             _particle.Play();
-            PlaySound(sounds[2], volume: 0.6f);
+            PlaySound(2, volume: 0.6f);
         }
     }
 }

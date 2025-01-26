@@ -22,7 +22,7 @@ public class Product{
     public bool isBought;
 }
 
-public class ShopManager : MonoBehaviour
+public class ShopManager : NewSouds
 {
     [SerializeField] private GameObject standart_fish, shopMenu, pauseMenu;
     [SerializeField] private Text CountOfPoints_Text;
@@ -49,6 +49,7 @@ public class ShopManager : MonoBehaviour
     public void SwitchShopMenu() {
         shopMenu.SetActive(!_isOpenShopMenu);
         pauseMenu.SetActive(!shopMenu.activeSelf);
+        PlaySound(0, random : true);
         _isOpenShopMenu = !_isOpenShopMenu;
     }
     

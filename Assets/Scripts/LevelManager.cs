@@ -38,13 +38,13 @@ public class LevelManager : Sounds
             _player.velocity = Vector3.zero;
             _lastPoint = _spawnPoint;
             _spawnPoint = null;
-            PlaySound(sounds[0], 1f, false, 0.97f, 1.1f);
+            PlaySound(sounds[0], 1f, false, 0.97f, 1.1f);         
 
         }
         else
         {
             _gameplayHUD.Lose(_lastPoint);
-            StopSound(sounds[1]);
+            PlaySound(sounds[1]);
         }
     }
 
