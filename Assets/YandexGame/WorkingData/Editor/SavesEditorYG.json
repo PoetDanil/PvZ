@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
     "idSave": 2403,
+=======
+    "idSave": 2190,
+>>>>>>> Stashed changes
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -10,7 +14,11 @@
         true,
         false
     ],
+<<<<<<< Updated upstream
     "points": 29417.0,
+=======
+    "points": 28327.0,
+>>>>>>> Stashed changes
     "products": [
         {
             "type": 0,
